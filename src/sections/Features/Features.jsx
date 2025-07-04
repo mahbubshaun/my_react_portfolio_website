@@ -42,11 +42,11 @@ const Features = () => {
         <div className={styles['feature-card']}>
           <span className={styles['feature-number']}>03</span>
           <div className={styles['feature-icon']}>
-            <i className="fab fa-node-js"></i>
+            <i className="fab fa-python"></i>
           </div>
           <h3 className={styles['feature-title']}>Back-End Development</h3>
           <p className={styles['feature-description']}>
-            I develop robust and scalable back-end systems with Node.js to power 
+            I develop robust and scalable back-end systems with Python & Node.js to power 
             AI applications and manage data effectively.
           </p>
         </div>
