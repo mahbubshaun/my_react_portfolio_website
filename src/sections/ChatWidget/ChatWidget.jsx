@@ -182,7 +182,8 @@ const handleSubmit = async (e) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "x-api-key": "a-secure-static-api-key-for-my-portfolio" // <-- REPLACE WITH YOUR ACTUAL API KEY
+                "x-api-key": "a-secure-static-api-key-for-my-portfolio",
+                "ngrok-skip-browser-warning": true 
             },
             body: JSON.stringify({
                 message: currentInput,
