@@ -9,7 +9,7 @@ const Features = () => {
         <h2 className={styles['section-heading']}>What I Do</h2>
         <p className={styles['section-description']}>
           I leverage my full-stack expertise to build and deploy intelligent AI agents. 
-          From front-end interfaces with React to back-end systems with Node.js, 
+          From front-end interfaces with React to back-end systems, 
           I create end-to-end solutions that integrate powerful AI capabilities.
         </p>
       </div>
