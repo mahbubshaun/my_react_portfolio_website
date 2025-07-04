@@ -1,0 +1,237 @@
+.resume-section {
+    padding: 80px 50px;
+    background-color: #111;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    color: #00ff00;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.section-heading {
+    font-size: 36px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column-title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #00ff00;
+    padding-bottom: 10px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 2px solid #2a2a2a;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #00ff00;
+}
+
+.timeline-date {
+    font-family: 'JetBrains Mono', monospace;
+    color: #00ff00;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.timeline-title {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.timeline-company {
+    color: #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.timeline-company i {
+    margin-right: 5px;
+}
+
+.timeline-description {
+    color: #c0c0c0;
+    margin-bottom: 15px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: #2a2a2a;
+    color: #c0c0c0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.download-cv {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.download-button {
+    background-color: #00ff00;
+    color: #1a1a1a;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #fff;
+}
+
+.download-button i {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .resume-section {
+        padding: 60px 20px;
+    }
+
+    .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .column-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .timeline-item {
+        margin-bottom: 25px;
+        padding-left: 18px;
+    }
+
+    .timeline-title {
+        font-size: 18px;
+    }
+
+    .timeline-description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .skills-list {
+        gap: 8px;
+    }
+
+    .skill-tag {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+    .download-button {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .resume-section {
+        padding: 50px 15px;
+    }
+
+    .section-heading {
+        font-size: 26px;
+    }
+
+    .resume-grid {
+        gap: 30px;
+    }
+
+    .column-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .timeline-item {
+        margin-bottom: 20px;
+        padding-left: 15px;
+    }
+
+    .timeline-item::before {
+        left: -6px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-date {
+        font-size: 13px;
+    }
+
+    .timeline-title {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    .timeline-company {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .timeline-description {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .skills-list {
+        gap: 6px;
+    }
+
+    .skill-tag {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    .download-cv {
+        margin-top: 40px;
+    }
+
+    .download-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 250px;
+    }
+}

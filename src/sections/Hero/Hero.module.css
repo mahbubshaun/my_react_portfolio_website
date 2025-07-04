@@ -1,0 +1,252 @@
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 50px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-left {
+    max-width: 600px;
+}
+
+.welcome-text {
+    color: #00ff00;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.name {
+    color: #00ff00;
+}
+
+.description {
+    color: #c0c0c0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.social-section,
+.tech-stack-section {
+    margin-bottom: 30px;
+}
+
+.social-title,
+.tech-stack-title {
+    color: #00ff00;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 10px;
+}
+
+.social-icons,
+.skills {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon,
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.social-icon a {
+    color: #fff;
+}
+
+.social-icon:hover,
+.skill-icon:hover {
+    background-color: #00ff00;
+    color: #1a1a1a;
+}
+
+.ai-highlight {
+    background-color: #00ff00 !important;
+    color: #1a1a1a !important;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+.ai-highlight:hover {
+    background-color: #fff !important;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.custom-icon {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    max-width: 400px;
+}
+
+.code-element {
+    position: absolute;
+    color: #00ff00;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+}
+
+.code-element-1 {
+    top: 20px;
+    left: -20px;
+}
+
+.code-element-2 {
+    bottom: 20px;
+    right: -20px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        padding: 80px 20px 40px;
+        text-align: center;
+    }
+
+    .content-left {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .social-section,
+    .tech-stack-section {
+        margin-bottom: 25px;
+    }
+
+    .social-icons,
+    .skills {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .social-icon,
+    .skill-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .custom-icon {
+        font-size: 10px;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+        order: -1;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+    }
+
+    .code-element {
+        font-size: 20px;
+    }
+
+    .code-element-1 {
+        top: 10px;
+        left: -10px;
+    }
+
+    .code-element-2 {
+        bottom: 10px;
+        right: -10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-content {
+        padding: 70px 15px 30px;
+    }
+
+    .title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .welcome-text {
+        font-size: 14px;
+    }
+
+    .social-title,
+    .tech-stack-title {
+        font-size: 14px;
+    }
+
+    .social-icons,
+    .skills {
+        gap: 10px;
+    }
+
+    .social-icon,
+    .skill-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .custom-icon {
+        font-size: 9px;
+    }
+
+    .hero-image img {
+        max-width: 240px;
+    }
+
+    .code-element {
+        font-size: 16px;
+    }
+}

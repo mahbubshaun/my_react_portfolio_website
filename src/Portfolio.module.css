@@ -1,0 +1,30 @@
+body {
+    background-color: #0d0d0d;
+    color: #c0c0c0;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><text x="0" y="15" font-family="monospace" font-size="12" fill="rgba(0, 255, 0, 0.1)">01</text></svg>');
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Global responsive utilities */
+@media screen and (max-width: 480px) {
+    .matrix-bg {
+        background-size: 50px 50px;
+    }
+}

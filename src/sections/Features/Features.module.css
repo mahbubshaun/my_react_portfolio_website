@@ -1,0 +1,191 @@
+.features-section {
+    padding: 80px 50px;
+    background-color: #111;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    color: #00ff00;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.section-heading {
+    font-size: 36px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.section-description {
+    color: #c0c0c0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.1);
+}
+
+.feature-number {
+    font-size: 24px;
+    color: #00ff00;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 10px;
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.feature-description {
+    color: #c0c0c0;
+}
+
+.code-decoration {
+    position: absolute;
+    color: #00ff00;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 48px;
+}
+
+.code-left {
+    left: 20px;
+    bottom: 20px;
+}
+
+.code-right {
+    right: 20px;
+    top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .features-section {
+        padding: 60px 20px;
+    }
+
+    .section-heading {
+        font-size: 30px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .feature-card {
+        padding: 25px 20px;
+    }
+
+    .feature-icon {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .feature-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .feature-description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .code-decoration {
+        font-size: 36px;
+    }
+
+    .code-left {
+        left: 15px;
+        bottom: 15px;
+    }
+
+    .code-right {
+        right: 15px;
+        top: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .features-section {
+        padding: 50px 15px;
+    }
+
+    .section-heading {
+        font-size: 26px;
+    }
+
+    .section-description {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    .features-grid {
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 20px 15px;
+    }
+
+    .feature-number {
+        font-size: 20px;
+    }
+
+    .feature-icon {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .feature-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .feature-description {
+        font-size: 14px;
+    }
+
+    .code-decoration {
+        font-size: 28px;
+    }
+
+    .code-left {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .code-right {
+        right: 10px;
+        top: 10px;
+    }
+}
