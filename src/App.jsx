@@ -18,25 +18,25 @@ import Navbar from './components/Navbar/Navbar';
 
 function App() {
 
-   useEffect(() => {
-    const keepAlive = () => {
-      fetch('https://your-backend-url.onrender.com/keep-alive') // Replace with your actual backend URL
-        .then(res => {
-          if (res.ok) {
-            console.log('Backend kept alive.');
-          } else {
-            console.error('Failed to keep backend alive.');
-          }
-        })
-        .catch(err => {
-          console.error('Error keeping backend alive:', err);
-        });
-    };
+  //  useEffect(() => {
+  //   const keepAlive = () => {
+  //     fetch('https://your-backend-url.onrender.com/keep-alive') // Replace with your actual backend URL
+  //       .then(res => {
+  //         if (res.ok) {
+  //           console.log('Backend kept alive.');
+  //         } else {
+  //           console.error('Failed to keep backend alive.');
+  //         }
+  //       })
+  //       .catch(err => {
+  //         console.error('Error keeping backend alive:', err);
+  //       });
+  //   };
 
-    const intervalId = setInterval(keepAlive, 14 * 60 * 1000); // Every 14 minutes
+  //   const intervalId = setInterval(keepAlive, 5 * 60 * 1000); // Every 14 minutes
 
-    return () => clearInterval(intervalId);
-  }, []);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   return (
     <>

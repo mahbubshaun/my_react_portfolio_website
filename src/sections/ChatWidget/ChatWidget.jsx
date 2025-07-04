@@ -178,7 +178,7 @@ const handleSubmit = async (e) => {
     setIsTyping(true);
 
     try {
-        const response = await fetch("/chat", {
+        const response = await fetch("http://54.146.99.28/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
