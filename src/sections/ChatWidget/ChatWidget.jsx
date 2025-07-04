@@ -178,7 +178,7 @@ const handleSubmit = async (e) => {
     setIsTyping(true);
 
     try {
-        const response = await fetch("http://54.146.99.28:5000/chat", {
+        const response = await fetch("https://d336-54-146-99-28.ngrok-free.app/chat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
