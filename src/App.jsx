@@ -17,26 +17,21 @@ import ChatWidget from './sections/ChatWidget/ChatWidget';
 import Navbar from './components/Navbar/Navbar';
 
 function App() {
+  const [showFloatingCTA, setShowFloatingCTA] = React.useState(false);
 
-  //  useEffect(() => {
-  //   const keepAlive = () => {
-  //     fetch('https://your-backend-url.onrender.com/keep-alive') // Replace with your actual backend URL
-  //       .then(res => {
-  //         if (res.ok) {
-  //           console.log('Backend kept alive.');
-  //         } else {
-  //           console.error('Failed to keep backend alive.');
-  //         }
-  //       })
-  //       .catch(err => {
-  //         console.error('Error keeping backend alive:', err);
-  //       });
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show floating CTA after scrolling past hero section
+      setShowFloatingCTA(window.scrollY > 600);
+    };
 
-  //   const intervalId = setInterval(keepAlive, 5 * 60 * 1000); // Every 14 minutes
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  //   return () => clearInterval(intervalId);
-  // }, []);
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
@@ -52,6 +47,18 @@ function App() {
         <ChatWidget />
       </main>
       <Footer />
+
+      {/* Floating CTA Button */}
+      {showFloatingCTA && (
+        <button
+          className={styles['floating-cta']}
+          onClick={scrollToContact}
+          aria-label="Get Free AI Assessment"
+        >
+          <i className="fas fa-rocket"></i>
+          <span>Get Free AI Assessment</span>
+        </button>
+      )}
     </>
   );
 }

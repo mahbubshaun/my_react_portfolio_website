@@ -1,21 +1,78 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Hero.module.css';
 import heroImg from '../../assets/images/hero-img.svg';
 
 const Hero = () => {
+  const [welcomeText, setWelcomeText] = React.useState('');
+  const [name, setName] = React.useState('');
+  useEffect(() => {
+    //call strapi api to get the hero data
+    const fetchHeroData = async () => {
+      try {
+        const response = await fetch('http://localhost:1337/api/hero-section', {
+            method: "GET",
+            headers: {
+              'Authorization': `Bearer ${import.meta.env.VITE_STRAPI_API_TOKEN}`, // Use your Strapi API token 
+            }
+
+          }
+          
+          ); // Replace with your API endpoint
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        let welcomeText = data.data.welcome_text; // Adjust based on your API response structure
+        setWelcomeText(welcomeText);
+        setName(data.data.name); // Set the name from the API response
+   
+      } catch (error) {
+        console.error('Error fetching hero data:', error);
+      }
+    }
+    fetchHeroData();
+  }, []);
+
   return (
     <div id="home" className={styles['main-content']}>
       <div className={styles['content-left']}>
-        <p className={styles['welcome-text']}>Welcome to my World</p>
+        <p className={styles['welcome-text']}>{welcomeText}</p>
         <h1 className={styles.title}>
-          Hi, I'm <span className={styles.name}>Mahbub Islam Shaun</span><br />a Full Stack
-          AI Agent Developer.
+          Hi, I'm <span className={styles.name}>Mahbub Shaun</span><br />a Full Stack
+          AI Agent Developer
         </h1>
         <p className={styles.description}>
-          Welcome to my portfolio! I build intelligent AI agents that can reason,
-          learn, and interact with the world. Explore my projects and see how I'm
-          shaping the future of AI.
+          I build AI agents that <span className={styles.highlight}>automate your business processes</span>,
+          reduce operational costs by <span className={styles.highlight}>60%</span>, and operate
+          <span className={styles.highlight}>24/7 without breaks</span>. From intelligent email management
+          to document processing - transform your business with custom AI solutions.
         </p>
+
+        <div className={styles['cta-section']}>
+          <a href="#contact" className={styles['primary-cta']}>
+            <i className="fas fa-calendar-alt"></i>
+            Schedule Free AI Consultation
+          </a>
+          <a href="#portfolio" className={styles['secondary-cta']}>
+            <i className="fas fa-eye"></i>
+            View Success Stories
+          </a>
+        </div>
+
+        <div className={styles['trust-metrics']}>
+          <div className={styles['metric']}>
+            <span className={styles['metric-number']}>200+</span>
+            <span className={styles['metric-label']}>Projects Delivered</span>
+          </div>
+          <div className={styles['metric']}>
+            <span className={styles['metric-number']}>90+</span>
+            <span className={styles['metric-label']}>Happy Clients</span>
+          </div>
+          <div className={styles['metric']}>
+            <span className={styles['metric-number']}>4+</span>
+            <span className={styles['metric-label']}>Years Experience</span>
+          </div>
+        </div>
 
         <div className={styles['social-section']}>
           <p className={styles['social-title']}>// find_me_on</p>

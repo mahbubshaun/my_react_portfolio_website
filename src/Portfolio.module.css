@@ -11,6 +11,66 @@ body {
     box-sizing: border-box;
 }
 
+/* Floating CTA Button */
+.floating-cta {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: linear-gradient(135deg, #00ff00 0%, #00cc00 100%);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    padding: 16px 24px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.floating-cta:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 255, 0, 0.5);
+}
+
+.floating-cta i {
+    font-size: 16px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(0, 255, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .floating-cta {
+        bottom: 20px;
+        left: 20px;
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .floating-cta span {
+        display: none;
+    }
+
+    .floating-cta i {
+        font-size: 18px;
+    }
+}
+
 .matrix-bg {
     position: fixed;
     top: 0;
