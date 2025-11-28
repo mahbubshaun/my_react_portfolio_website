@@ -38,14 +38,11 @@ const Hero = () => {
       <div className={styles['content-left']}>
         <p className={styles['welcome-text']}>{welcomeText}</p>
         <h1 className={styles.title}>
-          Hi, I'm <span className={styles.name}>Mahbub Shaun</span><br />a Full Stack
-          AI Agent Developer
+          Hi, I'm <span className={styles.name}>Mahbub Islam Shaun</span><br />a Full Stack
+          AI Engineer
         </h1>
         <p className={styles.description}>
-          I build AI agents that <span className={styles.highlight}>automate your business processes</span>,
-          reduce operational costs by <span className={styles.highlight}>60%</span>, and operate
-          <span className={styles.highlight}>24/7 without breaks</span>. From intelligent email management
-          to document processing - transform your business with custom AI solutions.
+            I develop <span className={styles.highlight}> scalable AI SaaS platforms </span>  and  sophisticated <span className={styles.highlight}>AI Automation systems </span> that transform complex workflows into automated, intelligent processes. Your custom AI platform or agent will  <span className={styles.highlight}> think, remember, and act autonomously using cutting-edge technologies like OpenAI, Claude, Gemini, Grok, Python, LangChain, N8N, AutoGen, FastAPI, Node.js, React, and vector databases (Pinecone/FAISS), Supabase </span>.
         </p>
 
         <div className={styles['cta-section']}>
