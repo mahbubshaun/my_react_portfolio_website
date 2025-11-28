@@ -119,7 +119,7 @@ const ChatWidget = () => {
     if (import.meta.env.DEV) {
       window.clearChatHistory = clearChatHistory;
     }
-  }, []);
+  }, [clearChatHistory]);
 
   // Initialize visitor data on component mount
   useEffect(() => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './Hero.module.css';
-import heroImg from '../../assets/images/hero-img.svg';
+import heroImg from '../../assets/images/hero.png';
 
 const Hero = () => {
   const [welcomeText, setWelcomeText] = React.useState('');
@@ -38,7 +38,7 @@ const Hero = () => {
       <div className={styles['content-left']}>
         <p className={styles['welcome-text']}>{welcomeText}</p>
         <h1 className={styles.title}>
-          Hi, I'm <span className={styles.name}>Mahbub Islam Shaun</span><br />a Full Stack
+          Hi, I'm <span className={styles.name}>Md Mahbub Islam Shaun</span><br />a Full Stack
           AI Engineer
         </h1>
         <p className={styles.description}>
