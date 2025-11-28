@@ -50,7 +50,7 @@ const Hero = () => {
             <i className="fas fa-calendar-alt"></i>
             Schedule Free AI Consultation
           </a>
-          <a href="#portfolio" className={styles['secondary-cta']}>
+          <a href="#portfolio" className={styles['primary-cta']}>
             <i className="fas fa-eye"></i>
             View Success Stories
           </a>
@@ -66,7 +66,7 @@ const Hero = () => {
             <span className={styles['metric-label']}>Happy Clients</span>
           </div>
           <div className={styles['metric']}>
-            <span className={styles['metric-number']}>4+</span>
+            <span className={styles['metric-number']}>5+</span>
             <span className={styles['metric-label']}>Years Experience</span>
           </div>
         </div>
