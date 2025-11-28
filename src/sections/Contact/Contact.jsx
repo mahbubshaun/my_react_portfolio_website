@@ -9,10 +9,10 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs.sendForm('service_dk0mq7j', 'template_pa7008i', e.target, 'vh75cQm8rlEtYUyuK')
-            .then((result) => {
+            .then(() => {
                 setModalOpen(true);
                 e.target.reset();
-            }, (error) => {
+            }, () => {
                 alert('Failed to send email. Please try again later.');
             });
     };
