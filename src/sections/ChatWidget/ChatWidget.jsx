@@ -176,9 +176,11 @@ const handleSubmit = async (e) => {
     const currentInput = input;
     setInput("");
     setIsTyping(true);
+    console.log('ngrok url is');
+    console.log(import.meta.env.VITE_NGROK_URL);
 
     try {
-        const response = await fetch(`${import.meta.env.NGROK_URL} + /chat`, {
+        const response = await fetch(import.meta.env.VITE_NGROK_URL+ `/chat`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
