@@ -178,7 +178,7 @@ const handleSubmit = async (e) => {
     setIsTyping(true);
 
     try {
-        const response = await fetch("https://e8d7-35-174-6-245.ngrok-free.app/chat", {
+        const response = await fetch(`${import.meta.env.NGROK_URL} + /chat`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -257,7 +257,7 @@ const handleSubmit = async (e) => {
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 text-white flex justify-between items-center shadow-md flex-shrink-0">
               <div>
-                <h2 className="font-bold text-md">Shaun's Digital Self</h2>
+                <h2 className="font-bold text-md">Maya - Virtual assistant</h2>
                 <p className="text-xs opacity-90">
                   {isTyping ? "Typing..." : "Typically replies instantly"}
                 </p>
