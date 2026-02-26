@@ -34,18 +34,18 @@ const ChatWidget = () => {
   const loadVisitorData = () => {
     try {
       const savedVisitorId = localStorage.getItem('chat_visitor_id');
-      
+
       if (savedVisitorId) {
         console.log('Returning visitor detected:', savedVisitorId);
         setVisitorId(savedVisitorId);
-        
-         const welcomeBackMsg = {
-                text: "Welcome back! We can pick up right where we left off. What's on your mind?",
-                sender: "ai",
-                timestamp: new Date()
-            };
-            setMessages([welcomeBackMsg]);
-        
+
+        const welcomeBackMsg = {
+          text: "Welcome back! We can pick up right where we left off. What's on your mind?",
+          sender: "ai",
+          timestamp: new Date()
+        };
+        setMessages([welcomeBackMsg]);
+
         // Update last visit timestamp
         localStorage.setItem('chat_last_visit', new Date().toISOString());
       } else {
@@ -55,7 +55,7 @@ const ChatWidget = () => {
         setVisitorId(newVisitorId);
         localStorage.setItem('chat_visitor_id', newVisitorId);
         localStorage.setItem('chat_last_visit', new Date().toISOString());
-        
+
         // Set initial welcome message for new visitors
         const welcomeMessage = {
           text: "Hi there! How can I help you today?",
@@ -94,13 +94,13 @@ const ChatWidget = () => {
       localStorage.removeItem('chat_messages');
       localStorage.removeItem('chat_visitor_id');
       localStorage.removeItem('chat_last_visit');
-      
+
       // Reset to new visitor state
       const newVisitorId = generateVisitorId();
       setVisitorId(newVisitorId);
       localStorage.setItem('chat_visitor_id', newVisitorId);
       localStorage.setItem('chat_last_visit', new Date().toISOString());
-      
+
       // Set initial welcome message
       const welcomeMessage = {
         text: "Hi there! How can I help you today?",
@@ -123,7 +123,7 @@ const ChatWidget = () => {
 
   // Initialize visitor data on component mount
   useEffect(() => {
-     // If the effect has already run, don't run it again.
+    // If the effect has already run, don't run it again.
     if (initialized.current) {
       return;
     }
@@ -160,16 +160,16 @@ const ChatWidget = () => {
   };
 
 
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!input.trim()) return;
 
     const userMessage = {
-        text: input,
-        sender: "user",
-        timestamp: new Date(),
+      text: input,
+      sender: "user",
+      timestamp: new Date(),
     };
-    
+
     const updatedMessagesWithUser = [...messages, userMessage];
     setMessages(updatedMessagesWithUser);
     saveMessages(updatedMessagesWithUser);
@@ -180,67 +180,67 @@ const handleSubmit = async (e) => {
     console.log(import.meta.env.VITE_NGROK_URL);
 
     try {
-        const response = await fetch(import.meta.env.VITE_NGROK_URL+ `/chat`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "x-api-key": "a-secure-static-api-key-for-my-portfolio",
-                "ngrok-skip-browser-warning": true 
-            },
-            body: JSON.stringify({
-                message: currentInput,
-                visitorId: visitorId,
-                sessionId: sessionId
-            }),
-        });
+      const response = await fetch(import.meta.env.VITE_NGROK_URL + `/chat`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": "a-secure-static-api-key-for-my-portfolio",
+          "ngrok-skip-browser-warning": "true"
+        },
+        body: JSON.stringify({
+          message: currentInput,
+          visitorId: visitorId,
+          sessionId: sessionId
+        }),
+      });
 
-        if (response.status === 401) {
-             alert("Authentication error. The API key is missing or invalid.");
-             setIsTyping(false);
-             return;
-        }
+      if (response.status === 401) {
+        alert("Authentication error. The API key is missing or invalid.");
+        setIsTyping(false);
+        return;
+      }
 
-        if (!response.body) {
-            throw new Error("Streaming not supported");
-        }
+      if (!response.body) {
+        throw new Error("Streaming not supported");
+      }
 
-        const reader = response.body.getReader();
-        const decoder = new TextDecoder();
-        let aiMessage = {
-            text: "",
-            sender: "ai",
-            timestamp: new Date()
-        };
-        
-        let finalMessages = [...updatedMessagesWithUser, aiMessage];
-        setMessages(finalMessages);
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let aiMessage = {
+        text: "",
+        sender: "ai",
+        timestamp: new Date()
+      };
 
-        // Read the raw text stream
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            
-            const chunk = decoder.decode(value, { stream: true });
-            aiMessage.text += chunk;
-            setMessages([...finalMessages]);
-        }
-        
-        saveMessages(finalMessages);
+      let finalMessages = [...updatedMessagesWithUser, aiMessage];
+      setMessages(finalMessages);
+
+      // Read the raw text stream
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value, { stream: true });
+        aiMessage.text += chunk;
+        setMessages([...finalMessages]);
+      }
+
+      saveMessages(finalMessages);
 
     } catch (fetchError) {
-        console.error('Error sending message:', fetchError);
-        const errorMessage = {
-            text: "Sorry, I'm having trouble connecting.",
-            sender: "ai",
-            timestamp: new Date()
-        };
-        const finalMessages = [...updatedMessagesWithUser, errorMessage];
-        setMessages(finalMessages);
-        saveMessages(finalMessages);
+      console.error('Error sending message:', fetchError);
+      const errorMessage = {
+        text: "Sorry, I'm having trouble connecting.",
+        sender: "ai",
+        timestamp: new Date()
+      };
+      const finalMessages = [...updatedMessagesWithUser, errorMessage];
+      setMessages(finalMessages);
+      saveMessages(finalMessages);
     } finally {
-        setIsTyping(false);
+      setIsTyping(false);
     }
-};
+  };
 
 
 
@@ -280,31 +280,29 @@ const handleSubmit = async (e) => {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className={`flex items-end gap-2.5 ${
-                    message.sender === "user" ? "justify-end" : "justify-start"
-                  }`}
+                  className={`flex items-end gap-2.5 ${message.sender === "user" ? "justify-end" : "justify-start"
+                    }`}
                 >
                   {message.sender === "ai" && (
                     <div className="w-7 h-7 rounded-full bg-blue-500 flex-shrink-0"></div>
                   )}
                   <div
-                    className={`max-w-[85%] rounded-xl px-3.5 py-2.5 shadow-sm ${
-                      message.sender === "user"
+                    className={`max-w-[85%] rounded-xl px-3.5 py-2.5 shadow-sm ${message.sender === "user"
                         ? "bg-blue-500 text-white rounded-br-lg"
                         : "bg-white text-gray-800 rounded-bl-lg border border-gray-200"
-                    }`}
+                      }`}
                   >
                     <div className="text-sm leading-relaxed">{formatMessage(message.text)}</div>
                     <p className="text-xs mt-1.5 opacity-70 text-right">
                       {message.timestamp
                         ? new Date(message.timestamp).toLocaleTimeString([], {
-                            hour: "numeric",
-                            minute: "2-digit",
-                          })
+                          hour: "numeric",
+                          minute: "2-digit",
+                        })
                         : ""}
                     </p>
                   </div>
-                   {message.sender === "user" && (
+                  {message.sender === "user" && (
                     <div className="w-7 h-7 rounded-full bg-gray-300 flex-shrink-0"></div>
                   )}
                 </motion.div>
@@ -316,7 +314,7 @@ const handleSubmit = async (e) => {
                   animate={{ opacity: 1, y: 0 }}
                   className="flex items-end gap-2.5"
                 >
-                   <div className="w-7 h-7 rounded-full bg-blue-500 flex-shrink-0"></div>
+                  <div className="w-7 h-7 rounded-full bg-blue-500 flex-shrink-0"></div>
                   <div className="bg-white border border-gray-200 rounded-xl rounded-bl-lg px-4 py-3 shadow-sm">
                     <div className="flex items-center space-x-1.5">
                       <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: "0ms" }} />
@@ -360,9 +358,8 @@ const handleSubmit = async (e) => {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300 ${
-          !isOpen ? "animate-pulse-subtle" : ""
-        }`}
+        className={`flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300 ${!isOpen ? "animate-pulse-subtle" : ""
+          }`}
         aria-label="Open chat"
       >
         <AnimatePresence>
