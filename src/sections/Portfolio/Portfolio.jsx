@@ -18,6 +18,31 @@ const portfolioItems = [
     {
         imgSrc: emailAgent,
         category: 'AI Agents',
+        title: 'AI Chatbot Agent for Restaurant Ordering & Reservations',
+        description: 'Conversational AI assistant for restaurants that handles menu browsing, table reservations, order placement, and customer support across web and messaging platforms.',
+        codeLink: 'https://github.com/mahbubshaun/example-llm-emails',
+        liveLink: 'https://github.com/mahbubshaun/example-llm-emails',
+        videoLink: 'https://www.youtube.com/watch?v=rM9EthMlXnw',
+        videoCaption: '',
+        tech: ['Python', 'React', 'OpenAI', 'LangChain', 'PostgreSQL', 'Supabase'],
+        duration: '4 weeks',
+        teamSize: 'Solo Project',
+        complexity: 'Advanced',
+        metrics: {
+            performance: '92% intent recognition accuracy',
+            impact: 'Reduced staff chat workload by 60%',
+            scale: 'Handles 500+ customer chats per day'
+        },
+        challenges: 'Designing a multi-step conversational ordering flow with real-time menu sync and error handling',
+        results: 'Deployed as a demo system for restaurants with automated bookings',
+        businessValue: 'Increases order conversions and reduces staff workload by automating customer interactions 24/7'
+        ,
+        problemStatement: 'Restaurants struggle with manual reservation processes and delayed responses to high inquiry volumes, leading to an overwhelmed staff during peak hours.',
+        technicalApproach: 'Engineered a conversational AI agent using LangChain and OpenAI models to handle multi-step interactions. Integrated real-time menu syncing and table availability checking.'
+    },
+    {
+        imgSrc: emailAgent,
+        category: 'AI Agents',
         title: 'Intelligent Email Processing Agent',
         description: 'Advanced AI system that automates email classification, response generation, and workflow optimization using LLM technology.',
         codeLink: 'https://github.com/mahbubshaun/example-llm-emails',
@@ -34,6 +59,9 @@ const portfolioItems = [
         challenges: 'Implementing context-aware response generation with multi-language support',
         results: 'Successfully deployed for small business automation, achieving 4.5x faster email response times',
         businessValue: 'Enables businesses to handle customer inquiries 24/7 with consistent, professional responses'
+        ,
+        problemStatement: 'Traditional email management systems struggle with the increasing volume of customer inquiries, leading to delayed responses and inconsistent communication quality. Manual email processing is time-intensive and prone to human error.',
+        technicalApproach: 'Implemented a multi-stage AI pipeline using LangChain for orchestration and OpenAI\'s GPT models for natural language understanding. Built custom classification algorithms to categorize emails by urgency and topic, then generated contextually appropriate responses using fine-tuned prompts.'
     },
     {
         imgSrc: speechToText,
@@ -54,6 +82,9 @@ const portfolioItems = [
         challenges: 'Optimizing model performance for real-time processing while maintaining accuracy across accents',
         results: 'Deployed production-ready API serving multiple client applications',
         businessValue: 'Enables accessibility features and voice-controlled interfaces for modern applications'
+        ,
+        problemStatement: 'Existing speech recognition solutions often lack accuracy in noisy environments and struggle with diverse accents. Real-time processing requirements demand optimized models that balance accuracy with speed.',
+        technicalApproach: 'Developed a custom TensorFlow model architecture optimized for real-time processing. Implemented noise reduction algorithms and accent adaptation techniques. Used FastAPI for efficient API endpoints with WebRTC integration for real-time audio streaming.'
     },
     {
         imgSrc: ragAgent,
@@ -74,6 +105,9 @@ const portfolioItems = [
         challenges: 'Building scalable vector embeddings with semantic search across diverse document types',
         results: 'Created enterprise-ready knowledge base that serves accurate, contextual responses',
         businessValue: 'Transforms static documentation into interactive knowledge systems, improving team productivity'
+        ,
+        problemStatement: 'Organizations struggle to extract actionable insights from vast document repositories. Traditional search methods fail to understand context and semantic relationships between information.',
+        technicalApproach: 'Built a sophisticated retrieval system using LlamaIndex for document indexing and ChromaDB for vector storage. Implemented semantic search capabilities with custom embedding models and context-aware response generation.'
     },
     {
         imgSrc: chatAppCover,
@@ -94,6 +128,9 @@ const portfolioItems = [
         challenges: 'Implementing secure real-time communication with scalable architecture',
         results: 'Production-ready chat platform with 99.9% uptime and positive user feedback',
         businessValue: 'Provides businesses with custom communication solutions, reducing dependency on third-party platforms'
+        ,
+        problemStatement: 'Modern communication requires real-time, scalable platforms that can handle concurrent users while maintaining security and performance. Existing solutions often lack customization options for specific business needs.',
+        technicalApproach: 'Architected a real-time communication platform using React for the frontend and Node.js with Socket.io for backend real-time capabilities. Implemented JWT authentication, MongoDB for data persistence, and optimized for concurrent user handling.'
     },
     {
         imgSrc: pricescout,
@@ -114,6 +151,9 @@ const portfolioItems = [
         challenges: 'Building robust web scraping system that adapts to changing retailer websites',
         results: 'Created comprehensive price tracking system with historical data visualization',
         businessValue: 'Helps consumers make informed purchasing decisions while providing market insights'
+        ,
+        problemStatement: 'Consumers waste significant time comparing prices across multiple retailers manually. Existing comparison tools lack comprehensive coverage and real-time accuracy.',
+        technicalApproach: 'Developed a web scraping system using multiple APIs to gather real-time pricing data. Implemented data normalization algorithms and built interactive visualizations using Chart.js for price trend analysis.'
     },
     {
         imgSrc: geekoutDashboard,
@@ -134,6 +174,9 @@ const portfolioItems = [
         challenges: 'Implementing smooth page transitions and memory-efficient image loading',
         results: 'Built responsive PWA with excellent user experience across devices',
         businessValue: 'Demonstrates modern web capabilities for content-heavy applications'
+        ,
+        problemStatement: 'Users need efficient, intuitive tools that enhance productivity and provide seamless user experiences. Legacy solutions often lack modern features and responsive design.',
+        technicalApproach: 'Applied modern web development practices including responsive design, progressive enhancement, and performance optimization. Focused on user experience with intuitive interfaces and seamless functionality.'
     },
     {
         imgSrc: weatherapp,
@@ -154,6 +197,9 @@ const portfolioItems = [
         challenges: 'Integrating multiple APIs and handling various data formats gracefully',
         results: 'Clean, intuitive interface with reliable weather data presentation',
         businessValue: 'Showcases API integration skills and data visualization capabilities'
+        ,
+        problemStatement: 'Users need efficient, intuitive tools that enhance productivity and provide seamless user experiences. Legacy solutions often lack modern features and responsive design.',
+        technicalApproach: 'Applied modern web development practices including responsive design, progressive enhancement, and performance optimization. Focused on user experience with intuitive interfaces and seamless functionality.'
     },
     {
         imgSrc: todolist,
@@ -174,6 +220,9 @@ const portfolioItems = [
         challenges: 'Creating intuitive UX for complex task relationships and filtering',
         results: 'Efficient task management tool with persistent data storage',
         businessValue: 'Demonstrates ability to create user-friendly productivity solutions'
+        ,
+        problemStatement: 'Users need efficient, intuitive tools that enhance productivity and provide seamless user experiences. Legacy solutions often lack modern features and responsive design.',
+        technicalApproach: 'Applied modern web development practices including responsive design, progressive enhancement, and performance optimization. Focused on user experience with intuitive interfaces and seamless functionality.'
     },
     {
         imgSrc: calculator,
@@ -194,6 +243,9 @@ const portfolioItems = [
         challenges: 'Implementing proper order of operations and error handling',
         results: 'Robust calculator with professional UI and full functionality',
         businessValue: 'Shows attention to detail and mathematical computation skills'
+        ,
+        problemStatement: 'Users need efficient, intuitive tools that enhance productivity and provide seamless user experiences. Legacy solutions often lack modern features and responsive design.',
+        technicalApproach: 'Applied modern web development practices including responsive design, progressive enhancement, and performance optimization. Focused on user experience with intuitive interfaces and seamless functionality.'
     },
     {
         imgSrc: tictac,
@@ -214,6 +266,9 @@ const portfolioItems = [
         challenges: 'Implementing minimax algorithm for optimal AI decision making',
         results: 'Created engaging game with sophisticated AI opponent',
         businessValue: 'Demonstrates algorithmic thinking and game logic implementation'
+        ,
+        problemStatement: 'Users need efficient, intuitive tools that enhance productivity and provide seamless user experiences. Legacy solutions often lack modern features and responsive design.',
+        technicalApproach: 'Applied modern web development practices including responsive design, progressive enhancement, and performance optimization. Focused on user experience with intuitive interfaces and seamless functionality.'
     },
     {
         imgSrc: rfq,
@@ -234,6 +289,9 @@ const portfolioItems = [
         challenges: 'Creating complex data relationships and workflow automation',
         results: 'Built comprehensive business management tool with reporting capabilities',
         businessValue: 'Streamlines procurement processes, saving time and improving vendor relationships'
+        ,
+        problemStatement: 'Traditional procurement processes are manual, time-consuming, and prone to errors. Businesses need streamlined workflows to manage vendor relationships and track requests efficiently.',
+        technicalApproach: 'Created a comprehensive workflow management system with automated tracking, vendor database integration, and reporting capabilities. Implemented data validation and process optimization algorithms.'
     },
     {
         imgSrc: bulkEmailingApp,
@@ -241,7 +299,9 @@ const portfolioItems = [
         title: 'Professional Email Campaign Manager',
         description: 'Desktop application for managing large-scale email campaigns with analytics and template management.',
         codeLink: 'https://github.com/mahbubshaun/email_automation?tab=readme-ov-file',
-        liveLink: 'https://youtu.be/D0qItr8IJKU',
+        liveLink: 'https://github.com/mahbubshaun/email_automation',
+        videoLink: 'https://youtu.be/D0qItr8IJKU',
+        videoCaption: 'Full demo of the desktop email marketing suite with SMTP integration.',
         tech: ['Python', 'Tkinter', 'SMTP', 'SQLite'],
         duration: '4 weeks',
         teamSize: 'Solo Project',
@@ -254,12 +314,48 @@ const portfolioItems = [
         challenges: 'Implementing reliable email delivery with rate limiting and error recovery',
         results: 'Production-ready desktop application with comprehensive email marketing features',
         businessValue: 'Enables small businesses to run professional email campaigns without expensive third-party tools'
+        ,
+        problemStatement: 'Small businesses struggle with expensive third-party email marketing tools while needing professional-grade campaign management capabilities.',
+        technicalApproach: 'Built a desktop application using Python and Tkinter with SMTP integration for reliable email delivery. Implemented rate limiting, bounce handling, and comprehensive analytics tracking.'
     }
 ];
 
 const Portfolio = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedProject, setSelectedProject] = useState(null);
+    const [activeVideo, setActiveVideo] = useState(null);
+
+    const getEmbedUrl = (url) => {
+        if (!url) return null;
+        if (url.includes('youtube.com/watch?v=')) {
+            return url.replace('watch?v=', 'embed/');
+        }
+        if (url.includes('youtu.be/')) {
+            return url.replace('youtu.be/', 'www.youtube.com/embed/');
+        }
+        return url;
+    };
+
+    const handleVideoClick = (e, url) => {
+        e.stopPropagation();
+        e.preventDefault();
+        setActiveVideo(url);
+    };
+
+    const closeVideoModal = () => {
+        setActiveVideo(null);
+    };
+
+    React.useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+                closeModal();
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
@@ -278,7 +374,7 @@ const Portfolio = () => {
         : portfolioItems.filter(item => item.category === selectedCategory);
 
     const getComplexityColor = (complexity) => {
-        switch(complexity) {
+        switch (complexity) {
             case 'Beginner': return '#4CAF50';
             case 'Intermediate': return '#FF9800';
             case 'Advanced': return '#F44336';
@@ -364,7 +460,20 @@ const Portfolio = () => {
                                 alt={item.title}
                                 className={styles['portfolio-image']}
                             />
-                            <div className={styles['complexity-badge']} style={{backgroundColor: getComplexityColor(item.complexity)}}>
+                            {item.videoLink && (
+                                <div
+                                    className={styles['video-preview-overlay']}
+                                    onClick={(e) => handleVideoClick(e, item.videoLink)}
+                                >
+                                    <div className={styles['video-preview-icon']}>
+                                        <i className="fas fa-play"></i>
+                                    </div>
+                                    {/* <p className={styles['video-preview-caption']}>
+                                        {item.videoCaption || 'Watch Project Demo'}
+                                    </p> */}
+                                </div>
+                            )}
+                            <div className={styles['complexity-badge']} style={{ backgroundColor: getComplexityColor(item.complexity) }}>
                                 {item.complexity}
                             </div>
                             <div className={styles['duration-badge']}>
@@ -429,6 +538,15 @@ const Portfolio = () => {
                                         <i className="fas fa-external-link-alt"></i>
                                         Demo
                                     </a>
+                                    {item.videoLink && (
+                                        <button
+                                            className={styles['portfolio-link']}
+                                            onClick={(e) => handleVideoClick(e, item.videoLink)}
+                                        >
+                                            <i className="fas fa-video"></i>
+                                            Video
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -469,7 +587,7 @@ const Portfolio = () => {
                                         </div>
                                         <div className={styles['highlight-item']}>
                                             <i className="fas fa-layer-group"></i>
-                                            <span><strong>Complexity:</strong> <span style={{color: getComplexityColor(selectedProject.complexity)}}>{selectedProject.complexity}</span></span>
+                                            <span><strong>Complexity:</strong> <span style={{ color: getComplexityColor(selectedProject.complexity) }}>{selectedProject.complexity}</span></span>
                                         </div>
                                     </div>
                                 </div>
@@ -511,7 +629,7 @@ const Portfolio = () => {
                                         <span className={styles['detail-label']}>Complexity:</span>
                                         <span
                                             className={styles['detail-value']}
-                                            style={{color: getComplexityColor(selectedProject.complexity)}}
+                                            style={{ color: getComplexityColor(selectedProject.complexity) }}
                                         >
                                             {selectedProject.complexity}
                                         </span>
@@ -552,60 +670,14 @@ const Portfolio = () => {
                                     <div className={styles['case-study-section']}>
                                         <h4><i className="fas fa-lightbulb"></i> Problem Statement</h4>
                                         <p className={styles['case-study-text']}>
-                                            {selectedProject.category === 'AI Agents' && selectedProject.title.includes('Email') &&
-                                                "Traditional email management systems struggle with the increasing volume of customer inquiries, leading to delayed responses and inconsistent communication quality. Manual email processing is time-intensive and prone to human error."
-                                            }
-                                            {selectedProject.category === 'AI Agents' && selectedProject.title.includes('Speech') &&
-                                                "Existing speech recognition solutions often lack accuracy in noisy environments and struggle with diverse accents. Real-time processing requirements demand optimized models that balance accuracy with speed."
-                                            }
-                                            {selectedProject.category === 'AI Agents' && selectedProject.title.includes('RAG') &&
-                                                "Organizations struggle to extract actionable insights from vast document repositories. Traditional search methods fail to understand context and semantic relationships between information."
-                                            }
-                                            {selectedProject.category === 'Full-Stack Development' &&
-                                                "Modern communication requires real-time, scalable platforms that can handle concurrent users while maintaining security and performance. Existing solutions often lack customization options for specific business needs."
-                                            }
-                                            {selectedProject.category === 'E-commerce Solutions' &&
-                                                "Consumers waste significant time comparing prices across multiple retailers manually. Existing comparison tools lack comprehensive coverage and real-time accuracy."
-                                            }
-                                            {(selectedProject.category === 'Content Management' || selectedProject.category === 'API Integration' || selectedProject.category === 'Productivity Tools' || selectedProject.category === 'Interactive Applications' || selectedProject.category === 'Game Development') &&
-                                                "Users need efficient, intuitive tools that enhance productivity and provide seamless user experiences. Legacy solutions often lack modern features and responsive design."
-                                            }
-                                            {selectedProject.category === 'Business Solutions' &&
-                                                "Traditional procurement processes are manual, time-consuming, and prone to errors. Businesses need streamlined workflows to manage vendor relationships and track requests efficiently."
-                                            }
-                                            {selectedProject.category === 'Marketing Automation' &&
-                                                "Small businesses struggle with expensive third-party email marketing tools while needing professional-grade campaign management capabilities."
-                                            }
+                                            {selectedProject.problemStatement}
                                         </p>
                                     </div>
 
                                     <div className={styles['case-study-section']}>
                                         <h4><i className="fas fa-cogs"></i> Technical Approach</h4>
                                         <p className={styles['case-study-text']}>
-                                            {selectedProject.category === 'AI Agents' && selectedProject.title.includes('Email') &&
-                                                "Implemented a multi-stage AI pipeline using LangChain for orchestration and OpenAI's GPT models for natural language understanding. Built custom classification algorithms to categorize emails by urgency and topic, then generated contextually appropriate responses using fine-tuned prompts."
-                                            }
-                                            {selectedProject.category === 'AI Agents' && selectedProject.title.includes('Speech') &&
-                                                "Developed a custom TensorFlow model architecture optimized for real-time processing. Implemented noise reduction algorithms and accent adaptation techniques. Used FastAPI for efficient API endpoints with WebRTC integration for real-time audio streaming."
-                                            }
-                                            {selectedProject.category === 'AI Agents' && selectedProject.title.includes('RAG') &&
-                                                "Built a sophisticated retrieval system using LlamaIndex for document indexing and ChromaDB for vector storage. Implemented semantic search capabilities with custom embedding models and context-aware response generation."
-                                            }
-                                            {selectedProject.category === 'Full-Stack Development' &&
-                                                "Architected a real-time communication platform using React for the frontend and Node.js with Socket.io for backend real-time capabilities. Implemented JWT authentication, MongoDB for data persistence, and optimized for concurrent user handling."
-                                            }
-                                            {selectedProject.category === 'E-commerce Solutions' &&
-                                                "Developed a web scraping system using multiple APIs to gather real-time pricing data. Implemented data normalization algorithms and built interactive visualizations using Chart.js for price trend analysis."
-                                            }
-                                            {(selectedProject.category === 'Content Management' || selectedProject.category === 'API Integration' || selectedProject.category === 'Productivity Tools' || selectedProject.category === 'Interactive Applications' || selectedProject.category === 'Game Development') &&
-                                                "Applied modern web development practices including responsive design, progressive enhancement, and performance optimization. Focused on user experience with intuitive interfaces and seamless functionality."
-                                            }
-                                            {selectedProject.category === 'Business Solutions' &&
-                                                "Created a comprehensive workflow management system with automated tracking, vendor database integration, and reporting capabilities. Implemented data validation and process optimization algorithms."
-                                            }
-                                            {selectedProject.category === 'Marketing Automation' &&
-                                                "Built a desktop application using Python and Tkinter with SMTP integration for reliable email delivery. Implemented rate limiting, bounce handling, and comprehensive analytics tracking."
-                                            }
+                                            {selectedProject.technicalApproach}
                                         </p>
                                     </div>
 
@@ -695,7 +767,37 @@ const Portfolio = () => {
                                     <i className="fas fa-external-link-alt"></i>
                                     Live Demo
                                 </a>
+                                {selectedProject.videoLink && (
+                                    <button
+                                        className={`${styles['modal-btn']} ${styles['modal-btn-primary']}`}
+                                        style={{ background: 'linear-gradient(135deg, #FF0000 0%, #CC0000 100%)', borderColor: '#FF0000' }}
+                                        onClick={(e) => handleVideoClick(e, selectedProject.videoLink)}
+                                    >
+                                        <i className="fas fa-video"></i>
+                                        Video Demo
+                                    </button>
+                                )}
                             </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Video Player Modal */}
+            {activeVideo && (
+                <div className={styles['video-modal-overlay']} onClick={closeVideoModal}>
+                    <div className={styles['video-modal-content']} onClick={(e) => e.stopPropagation()}>
+                        <button className={styles['video-modal-close']} onClick={closeVideoModal}>
+                            <i className="fas fa-times"></i>
+                        </button>
+                        <div className={styles['video-player-container']}>
+                            <iframe
+                                src={getEmbedUrl(activeVideo)}
+                                title="Project Demo Video"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
                         </div>
                     </div>
                 </div>
